@@ -58,7 +58,7 @@ The only thing in this entire process that the user needs to do is sending a tra
 
 - **Output:** The protocol includes two important points of output, the transfer amount output to the multi-signature address and the `OP_RETURN` information output contained in the cross contract transaction. Both need to be serialized in sequence as first and second elements respectively. For other points of output, can be used for returning change or other kinds of transfer. 
 
-- **OP_RETURN data format:** The one byte of data stored in `OP_RETURN` includes the cross chain label, receiver's target chain account address, chain ID of the target chain, cross chain transaction fee, and the address of the target contract. The target contract represents the token that complements BTC and is deployed on the target chain. For example, an ERC20 contract on Ethereum. The chain ID tells the Poly (the relay chain) where to transfer the BTC. The transaction fee charged here is the processing fee for using the cross chain ecosystem.
+- **OP_RETURN data format:** The one byte of data stored in `OP_RETURN` includes the cross chain label, receiver's target chain account address, chain ID of the target chain and the address of the target contract. The target contract represents the token that complements BTC and is deployed on the target chain. For example, an ERC20 contract on Ethereum. The chain ID tells the Poly (the relay chain) where to transfer the BTC. 
 
 #### 1.2 BTC Relay Transmission
 
